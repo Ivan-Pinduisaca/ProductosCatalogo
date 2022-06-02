@@ -15,11 +15,6 @@ export const Home = () => {
         navigate('/login');
     }
 
-
-    const header = (
-        <img alt="Card" src="src/images/LogoMulticomercio.png" onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} />
-    );
-
     const responsiveOptions = [
         {
             breakpoint: '1024px',
@@ -73,7 +68,7 @@ export const Home = () => {
                 <div className="card">
                     <div className="flex card-container blue-container overflow-hidden">
                         <div className="flex-none flex align-items-center justify-content-center m-2 px-5 py-3 border-round">
-                            <img src="src/images/LogoMulticomercio.jpg" alt="Logo Multicomercio" className='border-round-xl w-20rem h-6rem' />
+                            <img src="src/images/LogoAguila.jpg" alt="Logo Multicomercio" className='border-round-xl w-20rem h-6rem' />
                         </div>
                         <div className="flex-grow-1 flex align-items-center justify-content-start m-2 px-5 py-3 border-round">
                             <div className="card">
