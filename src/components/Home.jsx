@@ -5,6 +5,12 @@ import { Carousel } from 'primereact/carousel';
 
 import { useNavigate } from 'react-router-dom';
 
+import { FaBloggerB } from 'react-icons/fa';
+import { FaShoppingBag } from 'react-icons/fa';
+import { FaDollarSign } from 'react-icons/fa';
+import { BsInfoSquareFill } from 'react-icons/bs';
+import { ImCart } from 'react-icons/im';
+
 import '../css/CarouselDemo.css';
 
 export const Home = () => {
@@ -13,6 +19,10 @@ export const Home = () => {
 
     const login = () => {
         navigate('/login');
+    }
+
+    const logo = () => {
+        navigate('/home')
     }
 
     const responsiveOptions = [
@@ -67,23 +77,24 @@ export const Home = () => {
             <header>
                 <div className="card">
                     <div className="flex card-container blue-container overflow-hidden">
-                        <div className="flex-none flex align-items-center justify-content-center m-2 px-5 py-3 border-round">
-                            <img src="src/images/LogoAguila.jpg" alt="Logo Multicomercio" className='border-round-xl w-20rem h-6rem' />
+                        <div className="flex-none flex align-items-center justify-content-center m-2 px-5 border-round">
+                            <img src="src/images/LogoAguila.jpg" alt="Logo Multicomercio" className='border-round-xl w-20rem h-6rem cursor-pointer' onClick={logo} />
                         </div>
-                        <div className="flex-grow-1 flex align-items-center justify-content-start m-2 px-5 py-3 border-round">
+                        <div className="flex-grow-1 flex align-items-center justify-content-start m-2 mt-3 px-5 border-round">
                             <div className="card">
-                                <Button label='Productos' className="p-button-text text-black-alpha-90 text-xl text-center mx-5" icon='pi pi-shopping-bag text-2xl' />
-                                <Button label='Precios' className="p-button-text text-black-alpha-90 text-xl text-center mx-5" icon='pi pi-dollar text-2xl' />
-                                <Button label='Blog' className="p-button-text text-black-alpha-90 text-xl text-center mx-5" />
-                                <Button label='Nosotros' className="p-button-text text-black-alpha-90 text-xl text-center mx-5" />
+                                <Button label='Productos' className="p-button-text text-black-alpha-90 text-xl text-center mx-5" icon={<FaShoppingBag className='text-2xl mr-1' />} />
+                                <Button label='Precios' className="p-button-text text-black-alpha-90 text-xl text-center mx-5" icon={<FaDollarSign className='text-2xl mr-1' />} />
+                                <Button label='Blog' className="p-button-text text-black-alpha-90 text-xl text-center mx-5" icon={<FaBloggerB className='text-2xl mr-1' />} />
+                                <Button label='Nosotros' className="p-button-text text-black-alpha-90 text-xl text-center mx-5" icon={<BsInfoSquareFill className='text-2xl mr-1' />} />
                             </div>
                         </div>
-                        <div className="flex-none flex align-items-center justify-content-start m-2 px-5 py-3 border-round">
-                            <Button label='Pedidos' className="p-button-text text-black-alpha-90 text-xl text-center mr-2" icon='pi pi-shopping-cart text-2xl' />
+                        <div className="flex-none flex align-items-center justify-content-start m-2 mt-3 px-5 border-round">
+                            <Button label='Pedidos' className="p-button-text text-black-alpha-90 text-xl text-center mr-2" icon={<ImCart className='text-2xl mr-1' />} />
                             <Button label='Iniciar Sesión' onClick={login}
                                 className="bg-green-300 text-black-alpha-90 text-xl text-center mr-8" />
                         </div>
                     </div>
+                    <hr />
                 </div>
             </header>
 
