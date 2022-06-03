@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { Checkbox } from 'primereact/checkbox';
 import { Button } from 'primereact/button';
@@ -6,11 +6,37 @@ import { useNavigate } from 'react-router-dom';
 
 export const Login = () => {
 
-    const [checked, setChecked] = useState(false)
+    const [checked, setChecked] = useState(false);
+    const [activo, setActivo] = useState(false);
+    const [users, setUsers] = useState([])
     const navigate = useNavigate();
 
     const regresar = () => {
         navigate('/');
+    }
+
+    const logSuccess = () => {
+        navigate('/home');
+    }
+
+    useEffect(() => {
+        getUsers().then((user) => setUsers(user));
+    }, [])
+    
+    const verifyData = () => {
+        console.log(users);
+        // users.map((user) => {
+        //     if (user.email === ) {
+                
+        //     }
+        // })
+    }
+
+    const getUsers = async () => {
+        const res = await fetch('src/data/users.js');
+        const data = await res.json();
+        getUsers().then((user) => setUsers(user));
+        return data;
     }
 
     return (
@@ -41,7 +67,7 @@ export const Login = () => {
                             <a className="font-medium no-underline ml-2 text-right cursor-pointer text-900">Olvide mi contraseña</a>
                         </div>
                         <div className="flex align-items-center justify-content-center">
-                            <Button label="Iniciar sesion" icon="pi pi-user" className="w-30rem p-button-rounded p-button-success p-3" />
+                            <Button label="Iniciar sesion" icon="pi pi-user" className="w-30rem p-button-rounded p-button-success p-3" onClick={verifyData}/>
                         </div>
                     </div>
                 </div>
