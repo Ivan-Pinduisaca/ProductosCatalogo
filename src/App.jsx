@@ -7,6 +7,7 @@ import "primeicons/primeicons.css";                                //icons
 import 'primeflex/primeflex.css'                                   //primeflex
 import { Login } from './components/Login';
 import { Home } from './components/Home';
+import { ProductList } from './components/ProductList';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/:seccion" element={<ProductList />} />
     </Routes>
   )
 }
