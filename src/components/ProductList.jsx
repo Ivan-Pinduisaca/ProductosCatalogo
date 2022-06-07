@@ -85,7 +85,7 @@ export const ProductList = () => {
                   <h3>{prod.name}</h3>
                   <h4>$ {prod.price}</h4>
                   <h5>Responsive</h5>
-                  <Button label="Agregar el carrito" icon={<CgInsertAfterR className="mt-2 mr-1 text-2xl" />} onClick={() => onClick('displayResponsive', prod.id)} />
+                  <Button label="Agregar al carrito" icon={<CgInsertAfterR className="mt-2 mr-1 text-2xl" />} onClick={() => onClick('displayResponsive', prod.id)} />
                   <Dialog header={prod.name} visible={displayResponsive} onHide={() => onHide('displayResponsive')} breakpoints={{ '960px': '75vw' }} style={{ width: '50vw' }} footer={renderFooter('displayResponsive')}>
                     <Card title={`${prod.inventoryStatus} - ${prod.quantity}`} subTitle={`$${prod.price}`} style={{ width: '25em' }} footer={footer} header={header}>
                     </Card>
