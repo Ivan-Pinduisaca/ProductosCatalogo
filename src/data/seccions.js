@@ -7,14 +7,26 @@
     },
     {
         "id": "002",
-        "nombreSeccion": "Papeleria",
+        "nombreSeccion": "bazar",
+        "image": "bazar.jpg",
+        "descripcion": "Regalos, juguetes y mas articulos"
+    },
+    {
+        "id": "003",
+        "nombreSeccion": "papeleria",
         "image": "papeleria.jpg",
         "descripcion": "Cuadernos, reglas, diccionarios, esferos, marcadores, etc."
     },
     {
-        "id": "003",
-        "nombreSeccion": "Tecnologia",
+        "id": "004",
+        "nombreSeccion": "tecnologia",
         "image": "tecnologia.jpg",
         "descripcion": "Portatiles, celulares, camaras, cargadores, audifonos, etc."
+    },
+    {
+        "id": "005",
+        "nombreSeccion": "descartables",
+        "image": "descartables.jpg",
+        "descripcion": "Platos, cucharas, servilletas, vasos, etc."
     }
 ]

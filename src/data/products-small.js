@@ -6,7 +6,7 @@
         "description": "Product Description",
         "image": "bamboo-watch.jpg",
         "price": 65,
-        "category": "Accessories",
+        "category": "bazar",
         "quantity": 24,
         "inventoryStatus": "INSTOCK",
         "rating": 5
@@ -18,7 +18,7 @@
         "description": "Product Description",
         "image": "black-watch.jpg",
         "price": 72,
-        "category": "Accessories",
+        "category": "bazar",
         "quantity": 61,
         "inventoryStatus": "INSTOCK",
         "rating": 4
@@ -30,7 +30,7 @@
         "description": "Product Description",
         "image": "blue-band.jpg",
         "price": 79,
-        "category": "Fitness",
+        "category": "bazar",
         "quantity": 2,
         "inventoryStatus": "LOWSTOCK",
         "rating": 3
@@ -42,7 +42,7 @@
         "description": "Product Description",
         "image": "blue-t-shirt.jpg",
         "price": 29,
-        "category": "Clothing",
+        "category": "bazar",
         "quantity": 25,
         "inventoryStatus": "INSTOCK",
         "rating": 5
@@ -54,7 +54,7 @@
         "description": "Product Description",
         "image": "bracelet.jpg",
         "price": 15,
-        "category": "Accessories",
+        "category": "bazar",
         "quantity": 73,
         "inventoryStatus": "INSTOCK",
         "rating": 4
@@ -66,7 +66,7 @@
         "description": "Product Description",
         "image": "brown-purse.jpg",
         "price": 120,
-        "category": "Accessories",
+        "category": "bazar",
         "quantity": 0,
         "inventoryStatus": "OUTOFSTOCK",
         "rating": 4
@@ -78,7 +78,7 @@
         "description": "Product Description",
         "image": "chakra-bracelet.jpg",
         "price": 32,
-        "category": "Accessories",
+        "category": "bazar",
         "quantity": 5,
         "inventoryStatus": "LOWSTOCK",
         "rating": 3
@@ -90,7 +90,7 @@
         "description": "Product Description",
         "image": "galaxy-earrings.jpg",
         "price": 34,
-        "category": "Accessories",
+        "category": "tecnologia",
         "quantity": 23,
         "inventoryStatus": "INSTOCK",
         "rating": 5
@@ -102,7 +102,7 @@
         "description": "Product Description",
         "image": "game-controller.jpg",
         "price": 99,
-        "category": "Electronics",
+        "category": "tecnologia",
         "quantity": 2,
         "inventoryStatus": "LOWSTOCK",
         "rating": 4
@@ -114,7 +114,7 @@
         "description": "Product Description",
         "image": "gaming-set.jpg",
         "price": 299,
-        "category": "Electronics",
+        "category": "tecnologia",
         "quantity": 63,
         "inventoryStatus": "INSTOCK",
         "rating": 3
