@@ -41,6 +41,7 @@ export const Login = () => {
         );
         if (userFinded) {
           regresar();
+          Swal.fire("Bienvenido de vuelta", "", "info");
         } else {
           Swal.fire("Error", "Los datos no son correctos", "error");
         }
