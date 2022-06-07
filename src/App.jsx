@@ -7,17 +7,18 @@ import "primeicons/primeicons.css"; //icons
 import "primeflex/primeflex.css"; //primeflex
 import { Login } from "./components/Login";
 import { Home } from "./components/Home";
-import { ProductList } from "./components/ProductList";
+import { Products } from "./components/Products";
 import { useState } from "react";
 
 function App() {
-  const [isLogged, setIsLogged] = useState(false);
+
+  const [isLogin, setIsLogin] = useState(false);
+
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/:seccion" element={<ProductList />} />
+      <Route path="/" element={<Home isLogin={isLogin} />} />
+      <Route path="/login" element={<Login isLogin={isLogin} setIsLogin={setIsLogin} />} />
+      <Route path="/:seccion" element={<Products isLogin={isLogin} />} />
     </Routes>
   );
 }

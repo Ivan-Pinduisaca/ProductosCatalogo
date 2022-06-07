@@ -9,8 +9,7 @@ import { FaDollarSign } from 'react-icons/fa';
 import { BsInfoSquareFill } from 'react-icons/bs';
 import { ImCart } from 'react-icons/im';
 
-
-export const Header = () => {
+export const Header = ({ isLogin }) => {
 
     const navigate = useNavigate();
 
@@ -19,8 +18,9 @@ export const Header = () => {
     }
 
     const logo = () => {
-        navigate('/home');
+        navigate('/');
     }
+
     return (
         <header>
             <div className="card">
@@ -38,8 +38,17 @@ export const Header = () => {
                     </div>
                     <div className="flex-none flex align-items-center justify-content-start px-5 border-round">
                         <Button label='Pedidos' className="p-button-text text-black-alpha-90 text-xl text-center mr-2" icon={<ImCart className='text-2xl mr-1' />} />
-                        <Button label='Iniciar Sesión' onClick={login}
-                            className="bg-green-300 text-black-alpha-90 text-xl text-center mr-8" />
+
+                        {!isLogin ? (
+                            <Button label='Iniciar Sesión' onClick={login}
+                                className="bg-green-300 text-black-alpha-90 text-xl text-center mr-8" />
+                        ) : (
+                            <div className="text-black-alpha-90 text-xl text-center mr-8">Logueado</div>
+                        )
+                        }
+
+                        {/* <Button label='Iniciar Sesión' onClick={login}
+                            className="bg-green-300 text-black-alpha-90 text-xl text-center mr-8" /> */}
                     </div>
                 </div>
                 <hr />

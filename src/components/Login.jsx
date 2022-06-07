@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { InputText } from "primereact/inputtext";
 import { Checkbox } from "primereact/checkbox";
 import { Button } from "primereact/button";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.css";
 
-export const Login = () => {
+export const Login = ({ isLogin, setIsLogin }) => {
   const [checked, setChecked] = useState(false);
   const [users, setUsers] = useState([]);
   const [valForm, setValForm] = useState({
@@ -19,29 +19,28 @@ export const Login = () => {
   const navigate = useNavigate();
 
   const regresar = () => {
-    navigate("/home");
+    navigate("/");
   };
 
   const logSuccess = () => {
-    navigate("/home");
-  };
+    setIsLogin(true);
+    navigate('/');
+  }
 
   useEffect(() => {
     getUsers().then((user) => setUsers(user));
-    console.log(users);
   }, []);
 
   const handlerOnSubmit = (event) => {
     event.preventDefault();
     if (valForm.email.trim() !== "") {
       if (valForm.pass.trim() !== "") {
-        console.log(users);
         const userFinded = users.find(
           (u) => valForm.email === u.email && valForm.pass === u.pass
         );
         if (userFinded) {
-          regresar();
           Swal.fire("Bienvenido de vuelta", "", "info");
+          logSuccess();
         } else {
           Swal.fire("Error", "Los datos no son correctos", "error");
         }
@@ -61,7 +60,6 @@ export const Login = () => {
   const getUsers = async () => {
     const res = await fetch("src/data/users.js");
     const data = await res.json();
-    getUsers().then((user) => setUsers(user));
     return data;
   };
 

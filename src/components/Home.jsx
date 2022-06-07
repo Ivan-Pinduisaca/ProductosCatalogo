@@ -7,9 +7,8 @@ import '../css/CarouselDemo.css';
 import { Header } from '../page/Header';
 import { Content } from '../page/Content';
 
-export const Home = () => {
+export const Home = ({ isLogin }) => {
     const [seccions, setSeccions] = useState([]);
-
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -24,7 +23,7 @@ export const Home = () => {
 
     return (
         <div className='m-3 bg-green-100 text-black-alpha-90 border-round-xl'>
-            <Header />
+            <Header isLogin={isLogin} />
 
             <Content seccions={seccions} navigate={navigate} />
             <aside>
