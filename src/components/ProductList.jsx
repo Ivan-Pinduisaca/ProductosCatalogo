@@ -54,9 +54,9 @@ export const ProductList = () => {
     );
   }
 
-  const header = (
-    <img alt="Card" src="src/images/userLogin.png" onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} />
-  );
+  const header = (prod) =>{
+    return <img alt="Card" src={`src/images/product/${prod.image}`} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} />
+  };
 
   const footer = (
     <span>
@@ -87,7 +87,7 @@ export const ProductList = () => {
                   <h5>Responsive</h5>
                   <Button label="Agregar al carrito" icon={<CgInsertAfterR className="mt-2 mr-1 text-2xl" />} onClick={() => onClick('displayResponsive', prod.id)} />
                   <Dialog header={prod.name} visible={displayResponsive} onHide={() => onHide('displayResponsive')} breakpoints={{ '960px': '75vw' }} style={{ width: '50vw' }} footer={renderFooter('displayResponsive')}>
-                    <Card title={`${prod.inventoryStatus} - ${prod.quantity}`} subTitle={`$${prod.price}`} style={{ width: '25em' }} footer={footer} header={header}>
+                    <Card title={`${prod.inventoryStatus} - ${prod.quantity}`} subTitle={`$${prod.price}`} style={{ width: '25em' }} footer={footer} header={<img alt="Card" src={`src/images/product/${prod.image}`} />}>
                     </Card>
                   </Dialog>
                 </li>
