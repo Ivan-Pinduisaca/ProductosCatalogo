@@ -2,14 +2,17 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { Button } from 'primereact/button';
+import { Tooltip } from 'primereact/tooltip';
 
 import { FaBloggerB } from 'react-icons/fa';
 import { FaShoppingBag } from 'react-icons/fa';
 import { FaDollarSign } from 'react-icons/fa';
 import { BsInfoSquareFill } from 'react-icons/bs';
 import { ImCart } from 'react-icons/im';
+import { BiLogOutCircle } from 'react-icons/bi';
+import { VscVmActive } from 'react-icons/vsc';
 
-export const Header = ({ isLogin }) => {
+export const Header = ({ isLogin, setIsLogin }) => {
 
     const navigate = useNavigate();
 
@@ -20,9 +23,13 @@ export const Header = ({ isLogin }) => {
     const logo = () => {
         navigate('/');
     }
-    
-    const goCar = () =>{
+
+    const goCar = () => {
         navigate('/car');
+    }
+
+    const logout = () => {
+        setIsLogin(false);
     }
 
     return (
@@ -42,13 +49,22 @@ export const Header = ({ isLogin }) => {
                     </div>
                     <div className="flex-none flex align-items-center justify-content-start px-5 border-round">
                         <Button label='Pedidos' className="p-button-text text-black-alpha-90 text-xl text-center mr-2" icon={<ImCart className='text-2xl mr-1' />}
-                        onClick={goCar} />
+                            onClick={goCar} />
 
                         {!isLogin ? (
                             <Button label='Iniciar Sesión' onClick={login}
                                 className="bg-green-300 text-black-alpha-90 text-xl text-center mr-8" />
                         ) : (
-                            <div className="text-black-alpha-90 text-xl text-center mr-8">Logueado</div>
+                            <div>
+                                <div className="flex align-items-center">
+                                    <Tooltip target=".tooltip-button" autoHide={false}>
+                                        <div className="flex align-items-center">
+                                            <Button type="button" label='Cerrar sesion' icon={<BiLogOutCircle className='mr-2 text-3xl' />} onClick={logout} className="p-button-rounded p-button-success ml-2"></Button>
+                                        </div>
+                                    </Tooltip>
+                                    <Button className="tooltip-button ml-2" type="button" label="Logueado" icon={<VscVmActive className='mr-2 text-3xl' />} />
+                                </div>
+                            </div>
                         )
                         }
 

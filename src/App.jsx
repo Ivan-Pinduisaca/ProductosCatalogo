@@ -18,10 +18,10 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Home isLogin={isLogin} />} />
-      <Route path="/login" element={<Login isLogin={isLogin} setIsLogin={setIsLogin} />} />
-      <Route path="/:seccion" element={<Products isLogin={isLogin} prodBuy={prodBuy} setProdBuy={setProdBuy} />} />
-      <Route path="/car" element={<CarProducts isLogin={isLogin} prodBuy={prodBuy} setProdBuy={setProdBuy} />} />
+      <Route path="/" element={<Home isLogin={isLogin} setIsLogin={setIsLogin} />} />
+      <Route path="/login" element={<Login setIsLogin={setIsLogin} />} />
+      <Route path="/:seccion" element={<Products isLogin={isLogin} setIsLogin={setIsLogin} prodBuy={prodBuy} setProdBuy={setProdBuy} />} />
+      <Route path="/car" element={<CarProducts isLogin={isLogin} setIsLogin={setIsLogin} prodBuy={prodBuy} setProdBuy={setProdBuy} />} />
     </Routes>
   );
 }

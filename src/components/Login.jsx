@@ -7,7 +7,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.css";
 
-export const Login = ({ isLogin, setIsLogin }) => {
+export const Login = ({ setIsLogin }) => {
   const [checked, setChecked] = useState(false);
   const [users, setUsers] = useState([]);
   const [valForm, setValForm] = useState({

@@ -53,12 +53,11 @@ export const ProductList = ({prodBuy, setProdBuy}) => {
     const buy = {
       id: product.map((p) => p.id).toString(),
       nombre: product.map((p) => p.name).toString(),
-      precio: product.map((p) => p.price * value).toString(),
+      precio: parseFloat(product.map((p) => p.price * value)),
       imagen: product.map((p) => p.image).toString(),
-      cantidad: value
+      cantidad: value      
     }
     setProdBuy([...prodBuy, buy]);
-    console.log('prodBuy -> ', prodBuy);
   }
 
   const renderFooter = (name) => {

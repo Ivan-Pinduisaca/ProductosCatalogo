@@ -7,7 +7,7 @@ import '../css/CarouselDemo.css';
 import { Header } from '../page/Header';
 import { Content } from '../page/Content';
 
-export const Home = ({ isLogin }) => {
+export const Home = ({ isLogin, setIsLogin }) => {
     const [seccions, setSeccions] = useState([]);
     const navigate = useNavigate();
 
@@ -23,7 +23,7 @@ export const Home = ({ isLogin }) => {
 
     return (
         <div className='m-3 bg-green-100 text-black-alpha-90 border-round-xl'>
-            <Header isLogin={isLogin} />
+            <Header isLogin={isLogin} setIsLogin={setIsLogin} />
 
             <Content seccions={seccions} navigate={navigate} />
             <aside>
