@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { InputText } from "primereact/inputtext";
 import { Checkbox } from "primereact/checkbox";
 import { Button } from "primereact/button";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.css";

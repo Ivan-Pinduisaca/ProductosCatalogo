@@ -6,6 +6,7 @@ import '../css/CarouselDemo.css';
 
 import { Header } from '../page/Header';
 import { Content } from '../page/Content';
+import { Footer } from '../page/Footer';
 
 export const Home = ({ isLogin, setIsLogin }) => {
     const [seccions, setSeccions] = useState([]);
@@ -24,18 +25,8 @@ export const Home = ({ isLogin, setIsLogin }) => {
     return (
         <div className='m-3 bg-green-100 text-black-alpha-90 border-round-xl'>
             <Header isLogin={isLogin} setIsLogin={setIsLogin} />
-
             <Content seccions={seccions} navigate={navigate} />
-            <aside>
-                <ol>
-                    <li><span>Elements</span></li>
-                    <li><span>Estructure</span></li>
-                </ol>
-            </aside>
-
-            <footer>
-                @Ivan Pinduisaca &copy;
-            </footer>
+            <Footer />
         </div>
     )
 }

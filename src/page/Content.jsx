@@ -36,6 +36,7 @@ export const Content = ({ seccions, navigate }) => {
         return (
             <div className="product-item text-white-alpha-90 p-2">
                 <div className="product-item-content">
+                    <h1>{(seccion.nombreSeccion).toUpperCase()}</h1>
                     <div className="mb-3">
                         <img src={`src/images/seccions/${seccion.image}`} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={seccion.nombreSeccion} className="product-image w-11 h-23rem border-round-xl" />
                     </div>

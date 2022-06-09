@@ -1,4 +1,5 @@
 import React from 'react'
+import { Footer } from '../page/Footer'
 import { Header } from '../page/Header'
 import { ProductList } from './ProductList'
 
