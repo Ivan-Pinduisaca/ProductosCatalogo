@@ -9,16 +9,19 @@ import { Login } from "./components/Login";
 import { Home } from "./components/Home";
 import { Products } from "./components/Products";
 import { useState } from "react";
+import { CarProducts } from "./components/CarProducts";
 
 function App() {
 
   const [isLogin, setIsLogin] = useState(false);
+  const [prodBuy, setProdBuy] = useState([]);
 
   return (
     <Routes>
       <Route path="/" element={<Home isLogin={isLogin} />} />
       <Route path="/login" element={<Login isLogin={isLogin} setIsLogin={setIsLogin} />} />
-      <Route path="/:seccion" element={<Products isLogin={isLogin} />} />
+      <Route path="/:seccion" element={<Products isLogin={isLogin} prodBuy={prodBuy} setProdBuy={setProdBuy} />} />
+      <Route path="/car" element={<CarProducts isLogin={isLogin} prodBuy={prodBuy} setProdBuy={setProdBuy} />} />
     </Routes>
   );
 }

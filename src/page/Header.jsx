@@ -20,6 +20,10 @@ export const Header = ({ isLogin }) => {
     const logo = () => {
         navigate('/');
     }
+    
+    const goCar = () =>{
+        navigate('/car');
+    }
 
     return (
         <header>
@@ -37,7 +41,8 @@ export const Header = ({ isLogin }) => {
                         </div>
                     </div>
                     <div className="flex-none flex align-items-center justify-content-start px-5 border-round">
-                        <Button label='Pedidos' className="p-button-text text-black-alpha-90 text-xl text-center mr-2" icon={<ImCart className='text-2xl mr-1' />} />
+                        <Button label='Pedidos' className="p-button-text text-black-alpha-90 text-xl text-center mr-2" icon={<ImCart className='text-2xl mr-1' />}
+                        onClick={goCar} />
 
                         {!isLogin ? (
                             <Button label='Iniciar Sesión' onClick={login}
