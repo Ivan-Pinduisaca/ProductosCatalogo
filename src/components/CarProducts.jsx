@@ -3,7 +3,7 @@ import { Header } from '../page/Header'
 
 export const CarProducts = ({ isLogin, prodBuy }) => {
     return (
-        <div>
+        <div className='flex justify-content-evenly flex-wrap card-container list-none'>
             <Header isLogin={isLogin} />
             {prodBuy.map((p) => {
                 return (
@@ -15,6 +15,7 @@ export const CarProducts = ({ isLogin, prodBuy }) => {
                         />
                         <h3 className="flex align-items-center justify-content-center">{p.nombre}</h3>
                         <h4 className="flex align-items-center justify-content-center">$ {p.precio}</h4>
+                        <h4 className="flex align-items-center justify-content-center">Cantidad: {p.cantidad}</h4>
                     </div>
                 )
             })}

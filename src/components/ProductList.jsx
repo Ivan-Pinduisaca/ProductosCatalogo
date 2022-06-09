@@ -54,7 +54,8 @@ export const ProductList = ({prodBuy, setProdBuy}) => {
       id: product.map((p) => p.id).toString(),
       nombre: product.map((p) => p.name).toString(),
       precio: product.map((p) => p.price * value).toString(),
-      imagen: product.map((p) => p.image).toString()
+      imagen: product.map((p) => p.image).toString(),
+      cantidad: value
     }
     setProdBuy([...prodBuy, buy]);
     console.log('prodBuy -> ', prodBuy);
