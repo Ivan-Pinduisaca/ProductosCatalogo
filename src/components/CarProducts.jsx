@@ -30,9 +30,8 @@ export const CarProducts = ({ isLogin, setIsLogin, prodBuy }) => {
                         </div>
                     </div>
                 ) : (
-                    <h1 className='flex justify-content-center mb-5 text-blue-700 border-solid w-4 m-auto'>No ha iniciado sesion</h1>
+                    <h1 className='flex justify-content-center mb-5 text-blue-700 border-solid w-4 m-auto'>No has iniciado sesion</h1>
                 )}
-
         </div>
     )
 }

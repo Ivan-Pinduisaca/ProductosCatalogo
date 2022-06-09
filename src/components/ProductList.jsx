@@ -8,7 +8,7 @@ import { InputNumber } from 'primereact/inputnumber';
 
 import { CgInsertAfterR } from 'react-icons/cg';
 
-export const ProductList = ({prodBuy, setProdBuy}) => {
+export const ProductList = ({ prodBuy, setProdBuy }) => {
   const [products, setProducts] = useState([]);
   const [product, setProduct] = useState([]);
   const [value, setValue] = useState(0);
@@ -55,7 +55,7 @@ export const ProductList = ({prodBuy, setProdBuy}) => {
       nombre: product.map((p) => p.name).toString(),
       precio: parseFloat(product.map((p) => p.price * value)),
       imagen: product.map((p) => p.image).toString(),
-      cantidad: value      
+      cantidad: value
     }
     setProdBuy([...prodBuy, buy]);
   }
@@ -115,7 +115,7 @@ export const ProductList = ({prodBuy, setProdBuy}) => {
             })}
           </>
         ) : (
-          <>No hay productos</>
+          <div className="bg-green-300 text-2xl mt-5 p-3">No hay productos</div>
         )}
       </ul>
     </div>

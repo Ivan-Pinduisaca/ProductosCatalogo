@@ -30,6 +30,7 @@ export const Header = ({ isLogin, setIsLogin }) => {
 
     const logout = () => {
         setIsLogin(false);
+        logo();
     }
 
     return (
@@ -67,9 +68,6 @@ export const Header = ({ isLogin, setIsLogin }) => {
                             </div>
                         )
                         }
-
-                        {/* <Button label='Iniciar Sesión' onClick={login}
-                            className="bg-green-300 text-black-alpha-90 text-xl text-center mr-8" /> */}
                     </div>
                 </div>
                 <hr />
